@@ -23,7 +23,9 @@ let snowglobes = [];
 function setup() {
   createCanvas(800, 550);
   fill(240);
-
+  slider = createSlider(0, 100, 0, 1);
+  slider.position(5, height);
+  slider.style("width", "750px");
   noStroke();
   // test1 = new snowglobe();
 }
@@ -32,9 +34,9 @@ function draw() {
   background("black");
 
   let t = frameCount / 60; // update time
-
+  let snowCover = slider.value();
   // create a random number of snowflakes each frame
-  for (let i = 0; i < random(5); i++) {
+  for (let i = 0; i < random(snowCover); i++) {
     snowflakes.push(new snowflake()); // append snowflake object
   }
 
@@ -74,6 +76,11 @@ function draw() {
   rect(width / 2 - 15, height - 40, 30, 40);
 }
 
+function mousePressed() {
+  let globe = new snowglobe();
+  globe.display();
+}
+
 // snowflake class
 function snowflake() {
   // initialize coordinates
@@ -107,11 +114,15 @@ function snowflake() {
   };
 }
 
-// function snowglobe() {
-//   circle(30, 30, 20);
+function snowglobe() {
+  this.x = random(100);
+  this.y = random(100);
+  this.d = random(20);
 
-//   this.show;
-// }
+  this.display = function() {
+    circle(5, 5, 200);
+  };
+}
 
 //// ****** CHALLENGE 1 ******** //////
 
