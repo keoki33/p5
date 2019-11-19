@@ -145,11 +145,14 @@ class light {
 // challenge:
 
 // Make snow white, tree green, and lights to randomly change color.
+// What is a class? Why use? How use?
+// What is an array? What is javascript object?
+// What are the arrays in below code holding?
 
 // super challenge:
 
 // Change tree shape, add star on top
-// make snow bigger, change speed of snowfall
+// make snow bigger, change speed of snowfall, make snow direction random
 
 // super duper challenge:
 
