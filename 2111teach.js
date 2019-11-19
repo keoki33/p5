@@ -18,7 +18,7 @@
 // Christmas Tree Code
 
 let snowflakes = []; // array to hold snowflake objects
-let snowglobes = [];
+let lights = [];
 
 function setup() {
   createCanvas(800, 550);
@@ -27,7 +27,6 @@ function setup() {
   slider.position(5, height);
   slider.style("width", "750px");
   noStroke();
-  // test1 = new snowglobe();
 }
 
 function draw() {
@@ -74,11 +73,20 @@ function draw() {
   );
 
   rect(width / 2 - 15, height - 40, 30, 40);
+  if (mouseIsPressed) {
+    lightTree();
+  } else {
+    lights = [];
+  }
 }
 
-function mousePressed() {
-  let globe = new snowglobe();
-  globe.display();
+function lightTree() {
+  for (let i = 0; i < random(5); i++) {
+    lights.push(new light());
+  }
+  for (let x of lights) {
+    x.display();
+  }
 }
 
 // snowflake class
@@ -114,25 +122,30 @@ function snowflake() {
   };
 }
 
-function snowglobe() {
-  this.x = random(100);
-  this.y = random(100);
-  this.d = random(20);
+function light() {
+  this.y = random(100, 500);
+  this.x = random(380 - this.y / 5, 440 + this.y / 5);
+  this.d = random(25);
 
   this.display = function() {
-    circle(5, 5, 200);
+    circle(this.x, this.y, this.d);
   };
 }
 
 //// ****** CHALLENGE 1 ******** //////
 
-// Make snow white, tree green, and globes to randomly change color.
+// challenge:
 
-// if have time:
+// Make snow white, tree green, and lights to randomly change color.
+
+// super challenge:
 
 // Change tree shape, add texture
-// make snow bigger, slower, faster, random speed
-// add your own tree decoration with array and class
+// make snow bigger, change speed of snowfall
+
+// super duper challenge:
+
+// make you own tree and decorations with array and class
 
 // Race Game
 // Show project, break down if statements
