@@ -1,26 +1,32 @@
-// shortcuts:
+// teach shortcuts:
 
-// cut: ctrl x
-// copy: ctrl c
-// paste: ctrl v
+// cut: ctrl + x
+// copy: ctrl + c
+// paste: ctrl + v
 // select all: ctrl a
-// undo: ctrl z
-// redo: shift+ctrl x
+// undo: ctrl + z
+// redo: shift + ctrl + x
+// paste multiple lines: ctrl + c then ctrl + v on same line
+// select next: ctrl + d
+
+//rect((width / 2) - 15, height - 40, 30, 40);
+
+// tidy code: shift + tab
 // highlight and move text
 // Why use comment?
-// paste multiple lines: ctrl c then ctrl v on same line
-// select next: ctrl d
-// save file: ctrl s
-// tidy code: shift + tab
+// save file: ctrl + s
 
-// Why use pairs () {} "" [] ?
+// Why use pairs () {} "" ?
 
 // What is array?
-// arr = [ "popcorn", "biscuit", "crisps", 5 ]
+// let arr = [ "popcorn", "biscuit", "crisps", 5 ]
 // what is value of arr[2] ?
+
 // console.log()?
 
-// comment: ctrl /
+// tidy code: shift + tab
+
+// comment: ctrl + /
 //
 // Why comment out code?
 
@@ -34,11 +40,6 @@
 
 let snowflakes = []; // array to hold snowflake objects
 let lights = [];
-// let img
-
-// function preload() {
-//   img = loadImage('tree.jpeg');
-// }
 
 function setup() {
   createCanvas(800, 550);
@@ -91,14 +92,14 @@ function draw() {
     width / 1.5,
     height - 150
   );
-  rect(width / 2 - 15, height - 40, 30, 40);
 
+  // console.log(snowflakes)
+  rect(width / 2 - 15, height - 40, 30, 40);
   if (mouseIsPressed) {
     lightTree();
   } else {
     lights = [];
   }
-  // console.log(snowflakes)
 }
 
 function lightTree() {
@@ -167,6 +168,7 @@ class light {
 // super challenge:
 
 // Change tree shape, add star on top
+// Make it snow when mouse clicked and stop when released
 // make snow bigger, change speed of snowfall, make snow direction random
 
 // super duper challenge:
