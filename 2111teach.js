@@ -1,22 +1,36 @@
-// teach shortcuts:
+// shortcuts:
 
 // cut: ctrl x
 // copy: ctrl c
 // paste: ctrl v
+// select all: ctrl a
 // undo: ctrl z
 // redo: shift+ctrl x
-// paste multiple lines: ctrl c then ctrl v on same line
 // highlight and move text
-// save file: ctrl s
+// Why use comment?
+// paste multiple lines: ctrl c then ctrl v on same line
 // select next: ctrl d
-// comment: ctrl /
-// Why use pairs () {} "" ?
+// save file: ctrl s
 // tidy code: shift + tab
 
-// Why use comment?
+// Why use pairs () {} "" [] ?
+
+// What is array?
+// arr = [ "popcorn", "biscuit", "crisps", 5 ]
+// what is value of arr[2] ?
+// console.log()?
+
+// comment: ctrl /
+//
 // Why comment out code?
 
 // Christmas Tree Code
+
+//break down tree code into steps
+
+//draw tree
+//draw snow
+//draw lights
 
 let snowflakes = []; // array to hold snowflake objects
 let lights = [];
@@ -77,13 +91,14 @@ function draw() {
     width / 1.5,
     height - 150
   );
-
   rect(width / 2 - 15, height - 40, 30, 40);
+
   if (mouseIsPressed) {
     lightTree();
   } else {
     lights = [];
   }
+  // console.log(snowflakes)
 }
 
 function lightTree() {
@@ -260,32 +275,6 @@ class light {
 //   text(", : pew pew", 500, 360)
 
 // }
-
-// // function handleKey() {
-// //   if (keyIsDown(81)) {
-// //     p1Y = p1Y - playerSpeed
-// //   } else if (keyIsDown(65)) {
-// //     {
-// //       p1Y = p1Y + playerSpeed
-// //     }
-// //   } else if (keyIsDown(90)) {
-// //     {
-// //       p1Bullets.push(new bullet(35, 60 + p1Y))
-// //     }
-// //   } else if (keyIsDown(80)) {
-// //     {
-// //       p2Y = p2Y - playerSpeed
-// //     }
-// //   } else if (keyIsDown(76)) {
-// //     {
-// //       p2Y = p2Y + playerSpeed
-// //     }
-// //   } else if (keyIsDown(188)) {
-// //     {
-// //       p2Bullets.push(new bullet(760, 60 + p2Y))
-// //     }
-// //   }
-// // }
 
 // function keyPressed() {
 //   if (keyCode === 81) {
