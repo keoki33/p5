@@ -4,7 +4,7 @@
 // copy: ctrl + c
 // paste: ctrl + v
 // select all: ctrl a
-// undo: ctrl + z
+// undo: ctrl + z - use with caution
 // redo: shift + ctrl + x
 // paste multiple lines: ctrl + c then ctrl + v on same line
 // select next: ctrl + d
