@@ -52,20 +52,18 @@ function setup() {
 
 function draw() {
   background("black");
+  letItSnow();
+  drawTree();
 
-  let t = frameCount / 60; // update time
-  let snowCover = slider.value();
-  // create a random number of snowflakes each frame
-  for (let i = 0; i < random(snowCover); i++) {
-    snowflakes.push(new snowflake()); // append snowflake object
+  if (mouseIsPressed) {
+    lightTree();
+  } else {
+    lights = [];
   }
+  // console.log(snowflakes)
+}
 
-  // loop through snowflakes with a for..of loop
-  for (let flake of snowflakes) {
-    flake.update(t); // update snowflake position
-    flake.display(); // draw snowflake
-  }
-
+function drawTree() {
   triangle(
     width / 2,
     height - height / 2,
@@ -93,12 +91,21 @@ function draw() {
     height - 150
   );
 
-  // console.log(snowflakes)
   rect(width / 2 - 15, height - 40, 30, 40);
-  if (mouseIsPressed) {
-    lightTree();
-  } else {
-    lights = [];
+}
+
+function letItSnow() {
+  let t = frameCount / 60; // update time
+  let snowCover = slider.value();
+  // create a random number of snowflakes each frame
+  for (let i = 0; i < random(snowCover); i++) {
+    snowflakes.push(new snowflake()); // append snowflake object
+  }
+
+  // loop through snowflakes with a for..of loop
+  for (let flake of snowflakes) {
+    flake.update(t); // update snowflake position
+    flake.display(); // draw snowflake
   }
 }
 
